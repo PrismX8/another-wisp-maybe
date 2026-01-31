@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+
+body {
+	margin: 0;
+	background: radial-gradient(circle at 20% -20%, rgba(73, 92, 255, 0.5), transparent 35%),
+		radial-gradient(circle at 80% 20%, rgba(45, 212, 191, 0.3), transparent 40%),
+		#05060a;
+	color: #f8fbff;
+	font-family: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+	min-height: 100vh;
+}
+
+.nebulo-shell {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding: 3rem 2rem 5rem;
+	gap: 2rem;
+}
+
+.fa-magnifying-glass {
+	color: white;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+}
+
+.header-center {
+	align-items: center;
+	flex-direction: column;
+	margin-top: 10%;
+}
+
+.left-margin {
+	margin: 0px 16px;
+}
+
+#uv-frame {
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #111;
+}
+
+#uv-error {
+	color: #ff6666 !important;
+	white-space: pre-wrap;
+}
+
+#uv-error-code {
+	font-size: 12px;
+	color: #fff;
+	font-family: "Courier New", Courier, monospace;
+}
+
+#uv-register-sw {
+	color: white;
+	background: #555555;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	border-radius: 6px;
+	padding: 16px 20px;
+	line-height: 16px;
+	display: none;
+}
+
+#uv-register-sw:active {
+	background: #333333;
+}
+
+#uv-register-sw.show {
+	display: block;
+}
+
+.nebulo-header {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: flex-start;
+	line-height: 1.2;
+}
+
+.nebulo-logo {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.nebulo-logo img {
+	width: 110px;
+	height: 110px;
+	object-fit: contain;
+	filter: drop-shadow(0 10px 20px rgba(52, 211, 153, 0.4));
+}
+
+.nebulo-logo h1 {
+	font-size: clamp(2.5rem, 4vw, 3.5rem);
+	margin: 0;
+}
+
+.nebulo-eyebrow {
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	margin: 0;
+	color: rgba(248, 250, 255, 0.7);
+	font-size: 0.75rem;
+}
+
+.nebulo-tagline {
+	max-width: 640px;
+	color: rgba(255, 255, 255, 0.8);
+	margin: 0;
+	font-size: 1.15rem;
+}
+
+.search-button {
+	padding: 0.75rem 1.25rem;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	background: linear-gradient(120deg, rgba(45, 212, 191, 0.2), rgba(129, 140, 248, 0.25));
+	color: #f8fbff;
+	font-weight: 600;
+	cursor: pointer;
+	backdrop-filter: blur(14px);
+	box-shadow: 0 20px 40px rgba(15, 23, 42, 0.6);
+	align-self: flex-start;
+}
+
+.nebulo-main {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+.nebulo-hero {
+	max-width: 720px;
+	gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.05rem;
+	color: rgba(255, 255, 255, 0.85);
+	line-height: 1.6;
+}
+
+.nebulo-hero strong {
+	color: #f8fbff;
+}
+
+.nebulo-metrics {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+
+.nebulo-metrics div {
+	background: rgba(8, 15, 27, 0.8);
+	padding: 1rem;
+	border-radius: 18px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: inset 0 0 40px rgba(45, 212, 191, 0.05);
+}
+
+.nebulo-metrics span {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	opacity: 0.7;
+	display: block;
+}
+
+.nebulo-metrics strong {
+	display: block;
+	margin-top: 0.35rem;
+	font-size: 1rem;
+	color: #9de9f3;
+}
+
+.search-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(5, 6, 10, 0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	z-index: 100;
+	opacity: 1;
+	transition: opacity 0.3s ease, pointer-events 0.3s ease;
+}
+
+.search-overlay.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.search-panel {
+	background: rgba(13, 16, 33, 0.95);
+	border-radius: 24px;
+	padding: 2rem;
+	width: min(760px, 100%);
+	box-shadow: 0 30px 80px rgba(6, 8, 15, 0.8);
+	border: 1px solid rgba(129, 140, 248, 0.4);
+	position: relative;
+}
+
+.search-panel-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1.25rem;
+}
+
+.search-panel h2 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.close-search {
+	background: none;
+	border: none;
+	color: #f8fbff;
+	font-size: 2rem;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.search-form {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.search-form input {
+	flex: 1;
+	border-radius: 999px;
+	border: 1px solid rgba(248, 250, 255, 0.2);
+	background: rgba(255, 255, 255, 0.04);
+	color: #fff;
+	height: 58px;
+	padding: 0 1.5rem;
+	font-size: 1rem;
+	outline: none;
+	font-family: inherit;
+}
+
+.search-form button {
+	background: linear-gradient(135deg, #5eead4, #6366f1);
+	border: none;
+	color: #05060a;
+	font-weight: 600;
+	border-radius: 999px;
+	padding: 0.75rem 1.5rem;
+	cursor: pointer;
+	height: 56px;
+}
+
+footer {
+	margin: 0 5vw;
+	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+
+footer > div {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+}
+
+footer a,
+footer span {
+	margin: 0 15px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 15px;
+}
+
+footer a {
+	cursor: pointer;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+#uv-error {
+	color: #ff6666 !important;
+	min-height: 1.25rem;
+	margin-top: 1rem;
+}
+
+#uv-error-code {
+	font-size: 12px;
+	color: #fff;
+	font-family: "Courier New", Courier, monospace;
+}

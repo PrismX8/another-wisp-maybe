@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<title>Ultraviolet | Sophisticated Web Proxy</title>
+		<meta
+			name="description"
+			content="Ultraviolet is a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers. Unblock sites today!"
+		/>
+		<meta
+			name="keywords"
+			content="proxy, web proxy, ultraviolet, service workers, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked"
+		/>
+		<meta
+			name="theme-color"
+			media="(prefers-color-scheme: dark)"
+			content="#434c5e"
+		/>
+		<meta name="googlebot" content="index, follow, snippet" />
+		<link rel="shortcut icon" content="favicon.ico" />
+		<link rel="stylesheet" href="index.css" />
+		
+
+		<script src="baremux/index.js"></script>
+		<script src="uv/uv.bundle.js"></script>
+		<script src="uv/uv.config.js"></script>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "FAQPage",
+				"mainEntity": [
+					{
+						"@type": "Question",
+						"name": "What is Ultraviolet (Web Proxy)?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers and more!"
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "How do I unblock sites using Ultraviolet?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Simply head to an official site featuring Ultraviolet such as Holy Unblocker or Incognito! You can also self-host Ultraviolet on your own web server for maximum privacy."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "What if Ultraviolet is blocked or not working?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Join the Titanium Network Discord at discord.gg/unblock!"
+						}
+					}
+				]
+			}
+		</script>
+	</head>
+
+<body>
+	<div class="nebulo-shell">
+		<header class="nebulo-header">
+			<div class="nebulo-logo">
+				<img src="uv.png" alt="Nebulo" />
+				<div>
+					<p class="nebulo-eyebrow">Nebulo Network</p>
+					<h1>Ultraviolet Portal</h1>
+				</div>
+			</div>
+			<p class="nebulo-tagline">
+				Your Nebulo-branded proxy gateway—feel the glow while we keep the browsing sandboxed and safe.
+			</p>
+			<button class="search-button" id="open-search">Search the web</button>
+		</header>
+		<main class="nebulo-main">
+			<section class="nebulo-hero">
+				<p>
+					Nebulo extends Ultraviolet with sleek gradients, bold neon typography, and an always-present search command bar.
+				</p>
+				<p>
+					Experience the proxy as a Nebulo-native tool with the same secure transport and service-worker magic under the hood.
+				</p>
+				<div class="nebulo-metrics">
+					<div>
+						<span>Worldwide WISP</span>
+						<strong>neutral-joan-nebulo-7ce3f9eb.koyeb.app</strong>
+					</div>
+					<div>
+						<span>Transport</span>
+						<strong>Ultraviolet + BareMux + Epoxy</strong>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<div class="search-overlay hidden" id="search-overlay">
+		<div class="search-panel">
+			<div class="search-panel-header">
+				<div>
+					<p class="nebulo-eyebrow">Nebulo Search</p>
+					<h2>Type a URL or search query</h2>
+				</div>
+				<button class="close-search" id="close-search" aria-label="Close search overlay">
+					&times;
+				</button>
+			</div>
+			<form id="uv-form" class="search-form">
+				<input
+					id="uv-search-engine"
+					value="https://www.google.com/search?q=%s"
+					type="hidden"
+				/>
+				<input
+					id="uv-address"
+					type="text"
+					placeholder="Nebulo-powered proxy — enter a URL or search terms"
+					autocomplete="off"
+				/>
+				<button type="submit">Go</button>
+			</form>
+			<p id="uv-error"></p>
+			<pre id="uv-error-code"></pre>
+		</div>
+	</div>
+	<footer>
+			<div>
+				<a
+					title="The TitaniumNetwork GitHub organization"
+					href="https://github.com/titaniumnetwork-dev"
+					>TitaniumNetwork</a
+				>
+				<a title="The TitaniumNetwork Discord" href="https://discord.gg/unblock"
+					>Discord</a
+				>
+				<a
+					title="The TompHTTP GitHub organization"
+					href="https://github.com/tomphttp"
+					>TompHTTP</a
+				>
+				<a
+					title="The official deployment repository for Ultraviolet"
+					href="https://github.com/titaniumnetwork-dev/Ultraviolet-App"
+					>GitHub</a
+				>
+		<a title="License information" href="credits.html">Credits</a>
+	</div>
+	<div>
+		<span>Ultraviolet &copy; TN 2023</span>
+	</div>
+</footer>
+		<iframe style="display: none" id="uv-frame"></iframe>
+		<script src="register-sw.js"></script>
+		<script src="search.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
